@@ -1,0 +1,92 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+.experience-middle {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Responsive helpers ── */
+
+/* Hide desktop fish-eye, show mobile stack on small screens */
+@media (max-width: 768px) {
+  .projects-desktop-view {
+    display: none !important;
+  }
+  .projects-mobile-view {
+    display: flex !important;
+  }
+
+  /* Keyboard: shrink keys on small screens */
+  .keyboard-key {
+    width: 80px !important;
+    height: 72px !important;
+  }
+  .keyboard-key-top {
+    height: 46px !important;
+  }
+  .keyboard-key-base {
+    height: 46px !important;
+  }
+  .function-key {
+    width: 28px !important;
+    height: 24px !important;
+  }
+  .spacebar {
+    width: 80% !important;
+  }
+
+  /* CRT + speaker side-by-side → stack */
+  .crt-speaker-row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* experience bento grid: single column */
+  .experience-bento-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .experience-bento-grid > * {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    min-height: 260px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .keyboard-key {
+    width: 64px !important;
+    height: 60px !important;
+  }
+  .keyboard-key-top {
+    height: 38px !important;
+  }
+  .keyboard-key-base {
+    height: 38px !important;
+  }
+  .function-key {
+    width: 22px !important;
+    font-size: 8px !important;
+  }
+  .keyboard-row-gap {
+    gap: 0.4rem !important;
+  }
+}

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: cursive;
+}
+
+/* Force canvas onto its own GPU layer — prevents repaints bleeding into scroll */
+canvas {
+  display: block;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Smooth GSAP zoom section */
+.experience-section {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Pinned section GPU layer */
+.gsap-pinned {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Grid items — own compositing layer, no layout bleed */
+.grid > * {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Bento grid paint containment */
+.bento-grid {
+  content-visibility: auto;
+  contain: layout paint style;
+}
+
+/* Hover — use transform not box-shadow or layout props */
+.group {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+/* Prevent scroll jank on sections below the canvas */
+section {
+  isolation: isolate;
+}
+
+/* Ensure experience cards don't cause layout shifts */
+[style*="gridColumn"] {
+  contain: layout style;
+}
