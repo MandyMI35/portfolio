@@ -21,19 +21,19 @@ const projects = [
     url: "https://gymkhana.iitb.ac.in/sports/",
   },
   {
-    title: "Reasoning LLM from Scratch",
+    title: "Unified Spherical Harmonics Library",
     description:
-      "Implemented a reasoning-focused LLM pipeline inspired by DeepSeek-R1, incorporating Chain-of-Thought supervised fine-tuning and reinforcement learning–based alignment (RLHF/DPO) to enable multi-step logical reasoning, and integrated the model into a RAG-based agentic framework for context analysis, contradiction detection, and synthesized reasoning-driven responses",
-    tech: ["Python", "PyTorch", "Transformers (HuggingFace)", "CoT Fine-tuning", "RLHF / DPO", "RAG"],
-    image: "https://media.istockphoto.com/id/2203229031/photo/server-racks-full-of-routers-switches-and-servers-aligning-on-both-sides-of-an-aisle-of-a.jpg?s=612x612&w=0&k=20&c=rI1TinSZknIZrnaSGIhUpQUU0E9MCrd6LOFCWFtaRhk=",
-    url: "#",
+      "Built a differentiable PyTorch library unifying three spherical harmonic formulations (Legendre, Cartesian, solid recurrence) for GPU-accelerated MLIPs. Validated analytic gradients up to ℓ=10 against SciPy and autograd; benchmarked on GTO workloads at float16/32/64.",
+    tech: ["PyTorch", "Python", "SciPy", "NumPy"],
+    image: "https://images.stockcake.com/public/3/3/6/3364860a-c75f-4e47-86d1-2fbff287da61_large/digital-quantum-waves-stockcake.jpg",
+    url: "https://drive.google.com/file/d/1tNGUC2q5aD_BP5yc9XvZfVXLWs9m4wn2/view?usp=sharing",
   },
   {
     title: "Multi-Fidelity Optimization for Kinetics",
     description:
       "Conducted research on multi-fidelity optimization for reaction kinetics by developing an automated NEB workflow and fine-tuning MACE machine-learning potentials to analyze catalytic adsorption processes, while integrating Bayesian active learning to reduce expensive DFT computations in reaction discovery pipelines",
     tech: ["Python", "DFT", "MACE", "NEB", "ASE"],
-    image: "https://media.istockphoto.com/id/1629818920/photo/abstract-gravity-wave-background.jpg?s=612x612&w=0&k=20&c=AcXNGxu5P-Kw_Buxz5d0-IjRDSb23AUkWV9zcvtn6MQ=",
+    image: "https://images.unsplash.com/photo-1771015138249-7dbd8eab0546?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmslMjBjaGVtaXN0cnklMjBhZHNvcnB0aW9ufGVufDB8fDB8fHww",
     url: "#",
   },
   {
@@ -286,7 +286,7 @@ const ProjectsSection = () => {
           style={{ marginBottom: "clamp(2rem, 4vw, 4rem)" }}
         >
           <h2 style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)", fontWeight: 700, color: "#212529", margin: 0 }}>
-            Projects
+            Key Projects
           </h2>
           <div style={{ width: "6rem", height: "0.25rem", background: "#f0aec9", borderRadius: "9999px", marginTop: "1rem" }} />
         </motion.div>

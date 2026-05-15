@@ -131,7 +131,7 @@ const experiencesSample = [
   },
   {
     number: "03",
-    period: "Summer 2026",
+    period: "May - July 2026",
     role: "IT Intern",
     company: "P&G",
     description:
@@ -152,7 +152,6 @@ const experiencesSample = [
 const ExperienceCardSample = ({ exp, index }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  /* Grid spans used only on ≥768 px — below that the CSS class resets them */
   const gridColumn = index === 0 ? "span 7" : index === 3 ? "span 12" : "span 5";
   const gridRow = index === 0 ? "span 2" : "auto";
   const minHeight = index === 0 ? "420px" : index === 3 ? "200px" : "200px";
@@ -193,11 +192,30 @@ const ExperienceCardSample = ({ exp, index }) => {
           lineHeight: 1,
           userSelect: "none",
           pointerEvents: "none",
-          fontSize: index === 0 ? "clamp(6rem,12vw,16rem)" : index === 1 ? "clamp(5rem,8vw,10rem)" : index === 2 ? "clamp(5rem,9vw,12rem)" : "clamp(6rem,12vw,18rem)",
+          fontSize:
+            index === 0
+              ? "clamp(6rem,12vw,16rem)"
+              : index === 1
+              ? "clamp(5rem,8vw,10rem)"
+              : index === 2
+              ? "clamp(5rem,9vw,12rem)"
+              : "clamp(6rem,12vw,18rem)",
           bottom: index === 0 ? "1rem" : "auto",
-          right: index === 0 || index === 1 || index === 3 ? (index === 3 ? "2rem" : "1rem") : "auto",
-          top: index === 1 ? "0.5rem" : index === 3 ? "50%" : "auto",
-          left: index === 2 ? "-0.5rem" : "auto",
+          right:
+            index === 0 || index === 1 || index === 2 || index === 3
+              ? index === 3
+                ? "2rem"
+                : "1rem"
+              : "auto",
+          top:
+            index === 1
+              ? "0.5rem"
+              : index === 2
+              ? "0.5rem"
+              : index === 3
+              ? "50%"
+              : "auto",
+          left: "auto",
           transform: index === 3 ? "translateY(-50%)" : "none",
         }}
       >
