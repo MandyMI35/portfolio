@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 import { Mail, SquareTerminal, Github, Linkedin, Code, Bug, Gitlab, Globe, GitPullRequestArrow } from "lucide-react";
 
 const contactKeys = [
-  { id: "email",   label: "EM", icon: Mail,               value: "mndalwee@gmail.com",                                           action: "COPY",     row: 1, col: 1 },
+  { id: "email",   label: "EM", icon: Mail,               value: "mndalwee@gmail.com",                                           action: "MAIL",     row: 1, col: 1 },
   { id: "github",  label: "GH", icon: Github,             value: "https://github.com/MandyMI35",                                 action: "OPEN",     row: 1, col: 2 },
   { id: "linkedin",label: "LI", icon: Linkedin,           value: "https://www.linkedin.com/in/mandakini-dalwee-bab162293/",     action: "OPEN",     row: 1, col: 3 },
-  { id: "twitter", label: "",   icon: Code,               value: "Refactoring: because I was wrong",                            action: "OPEN",     row: 2, col: 1 },
-  { id: "phone",   label: "",   icon: Bug,                value: "It's a feature, not a bug",                                   action: "COPY",     row: 2, col: 2 },
+  { id: "twitter", label: "",   icon: Code,               value: "Refactoring: because I was wrong",                            action: "",     row: 2, col: 1 },
+  { id: "phone",   label: "",   icon: Bug,                value: "It's a feature, not a bug",                                   action: "",     row: 2, col: 2 },
   { id: "gl",      label: "GL", icon: Gitlab,             value: "https://gitlab.com/Mandakini_525",                            action: "OPEN",     row: 2, col: 3 },
-  { id: "website", label: "",   icon: Globe,              value: "Works on my machine",                                         action: "OPEN",     row: 3, col: 1 },
-  { id: "resume",  label: "",   icon: GitPullRequestArrow,value: "i have no idea why",                                          action: "DOWNLOAD", row: 3, col: 2 },
-  { id: "contact", label: "",   icon: SquareTerminal,     value: "coffee+dark circle = code",                                   action: "MAIL",     row: 3, col: 3 },
+  { id: "website", label: "",   icon: Globe,              value: "Works on my machine",                                         action: "",     row: 3, col: 1 },
+  { id: "resume",  label: "",   icon: GitPullRequestArrow,value: "i have no idea why",                                          action: "", row: 3, col: 2 },
+  { id: "contact", label: "",   icon: SquareTerminal,     value: "coffee+dark circle = code",                                   action: "",     row: 3, col: 3 },
 ];
 
 const ContactSection = () => {

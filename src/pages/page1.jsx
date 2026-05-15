@@ -24,9 +24,9 @@ export function Overlay() {
     words: [
       "Pre final year UG student",
       "Full stack developer",
-      "ML enthusiast",
-      "Caffeine Addict",
+      "ML researcher",
       "Swimmer",
+      "Chemical engineer"
     ],
     loop: true,
     typeSpeed: 70,

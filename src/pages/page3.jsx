@@ -41,7 +41,7 @@ const projects = [
     description:
       "Conducted an empirical evaluation of Residual Network architectures by implementing ResNet from first principles in NumPy and systematically benchmarking it against VGG, DenseNet, and EfficientNet across MNIST and medical imaging datasets, achieving up to 95% accuracy",
     tech: ["Python", "NumPy", "VGG", "DenseNet", "EfficientNet", "Deep Learning", "Medical Imaging"],
-    image: "https://static.ib-formation.fr/content/uploads/2024/10/15175325/Automatiser-processus-machine-learning-ib-cegos.png",
+    image: "https://cdn.prod.website-files.com/6409ffaf9710757e4978ca9c/65fc0920ea85400f355f2904_Cover.jpg",
     url: "https://drive.google.com/file/d/1YInqHmBNzFmAsExuSTsQ6J8DeCVl37Ai/view?usp=sharing",
   },
   {
